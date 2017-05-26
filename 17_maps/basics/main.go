@@ -7,7 +7,9 @@ import (
 func main() {
 	// makeMap()
 	// deleteFromMap()
-	checkKeyInMap()
+	// checkKeyInMap()
+
+	rangeOverMap()
 
 }
 
@@ -61,5 +63,19 @@ func checkKeyInMap() {
 	}
 	fmt.Println(myGreeting)
 	delete(myGreeting, "kalabha")
+
+}
+
+func rangeOverMap() {
+	myGreeting := map[int]string{
+		0: "Good MOrning!",
+		1: "Bonjour",
+		2: "Buenous dias",
+		3: "Bongiorno!",
+	}
+
+	for i, v := range myGreeting {
+		fmt.Println(i, " - ", v)
+	}
 
 }
